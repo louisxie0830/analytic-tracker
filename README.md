@@ -69,10 +69,6 @@ Track an event.
 
 Stop auto-sending events.
 
-## Contributing
-
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
