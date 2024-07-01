@@ -1,0 +1,64 @@
+{
+  "name": "analytic-tracker",
+  "version": "1.0.0",
+  "description": "A TypeScript library for tracking and analyzing events.",
+  "main": "dist/cjs/src/index.js",
+  "module": "dist/esm/src/index.js",
+  "types": "dist/types/src/index.d.ts",
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "prepublishOnly": "npm run build",
+    "stats": "cloc . --exclude-dir=node_modules,lib,examples,tmp,.git --exclude-ext=yaml,yml,json,svg,xml",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/louisxie0830/analytic-tracker.git"
+  },
+  "keywords": [
+    "event",
+    "tracking",
+    "analytics",
+    "log",
+    "typescript",
+    "tracker",
+    "event tracking"
+  ],
+  "author": "Nil Xie <bfgh2678@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/louisxie0830/analytic-tracker/issues"
+  },
+  "homepage": "https://github.com/louisxie0830/analytic-tracker#readme",
+  "devDependencies": {
+    "cloc": "^2.0.0-cloc",
+    "typescript": "^4.5.4",
+    "prettier": "^2.0.0",
+    "eslint": "^7.0.0",
+    "jest": "^26.6.0",
+    "ts-jest": "^26.5.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0"
+  },
+  "type": "module",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

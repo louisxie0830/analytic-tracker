@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/cjs",
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "composite": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"]
+}
