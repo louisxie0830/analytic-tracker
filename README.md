@@ -14,13 +14,7 @@ Analytic Tracker is a TypeScript library for tracking and analyzing events.
 Install using npm:
 
 ```bash
-npm install analytic-tracker
-```
-
-or using yarn:
-
-```bash
-yarn add analytic-tracker
+npm install git+https://github.com/louisxie0830/analytic-tracker.git
 ```
 
 ## Usage
