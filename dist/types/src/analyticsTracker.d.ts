@@ -32,6 +32,12 @@ export default class Tracker {
      */
     stopFlushInterval(): void;
     /**
+     * Cleans the event queue by resetting it to an empty array.
+     *
+     * @return {void} This function does not return anything.
+     */
+    cleanEventQueue(): void;
+    /**
      * 發送事件到伺服器
      * @private
      * @async

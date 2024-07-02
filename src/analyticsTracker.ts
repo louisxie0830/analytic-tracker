@@ -76,6 +76,15 @@ export default class Tracker {
   }
 
   /**
+   * Cleans the event queue by resetting it to an empty array.
+   *
+   * @return {void} This function does not return anything.
+   */
+  public cleanEventQueue(): void {
+    this.eventQueue = [];
+  }
+
+  /**
    * 發送事件到伺服器
    * @private
    * @async
